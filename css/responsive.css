@@ -1,0 +1,34 @@
+/* ==========================================================
+   Адаптив: планшет и телефон
+   ========================================================== */
+
+@media (max-width:1100px){
+  .nav,.phone{display:none}
+  .burger{display:flex}
+  .nav.open{display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 32px 16px}
+  .nav.open a{padding:14px 0}
+  .nav.open a.active::after{bottom:8px; right:auto; width:40px}
+  .hero .wrap,.cta .wrap,.about-intro,.contacts,.svc-row{grid-template-columns:1fr}
+  .svc-row:nth-child(even) .svc-art{order:0}
+  .grid3,.values,.team{grid-template-columns:repeat(2,1fr)}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step::after{display:none}
+  .case-item{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .modal-box{padding:32px 20px 16px}
+  .wrap{width:calc(100% - 40px)}
+  .head-actions .btn{display:none}
+  .section{padding:64px 0}
+  .grid3,.grid2,.values,.team,.steps,.case-item,.foot-top{grid-template-columns:1fr}
+  .hero-panel{min-height:auto; padding:32px; gap:28px}
+  .hero-frame{width:64px; height:260px; border-width:14px}
+  @keyframes grow{from{height:0}to{height:260px}}
+  .hero-facts strong{font-size:34px}
+  .sec-head{flex-direction:column; align-items:flex-start}
+  .form{padding:24px}
+  .foot-bot{flex-direction:column}
+}
