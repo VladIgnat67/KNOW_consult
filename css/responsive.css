@@ -1,34 +1,7 @@
-/* ==========================================================
-   Адаптив: планшет и телефон
-   ========================================================== */
-
-@media (max-width:1100px){
-  .nav,.phone{display:none}
-  .burger{display:flex}
-  .nav.open{display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 32px 16px}
-  .nav.open a{padding:14px 0}
-  .nav.open a.active::after{bottom:8px; right:auto; width:40px}
-  .hero .wrap,.cta .wrap,.about-intro,.contacts,.svc-row{grid-template-columns:1fr}
-  .svc-row:nth-child(even) .svc-art{order:0}
-  .grid3,.values,.team{grid-template-columns:repeat(2,1fr)}
-  .stats .wrap{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .step::after{display:none}
-  .case-item{grid-template-columns:1fr 1fr}
-  .foot-top{grid-template-columns:1fr 1fr}
+@media(max-width:1080px){
+  .nav{gap:16px}.head-actions .phone{display:none}.tour-grid,.tour-list,.destinations,.post-grid{grid-template-columns:repeat(2,1fr)}.experience__copy{padding:45px}.foot-top{grid-template-columns:1.4fr 1fr 1fr}.foot-top>div:last-child{grid-column:span 2}.about-story,.contact-layout{gap:40px}
 }
-@media (max-width:640px){
-  .stats .wrap{grid-template-columns:1fr 1fr}
-  .modal-box{padding:32px 20px 16px}
-  .wrap{width:calc(100% - 40px)}
-  .head-actions .btn{display:none}
-  .section{padding:64px 0}
-  .grid3,.grid2,.values,.team,.steps,.case-item,.foot-top{grid-template-columns:1fr}
-  .hero-panel{min-height:auto; padding:32px; gap:28px}
-  .hero-frame{width:64px; height:260px; border-width:14px}
-  @keyframes grow{from{height:0}to{height:260px}}
-  .hero-facts strong{font-size:34px}
-  .sec-head{flex-direction:column; align-items:flex-start}
-  .form{padding:24px}
-  .foot-bot{flex-direction:column}
+@media(max-width:760px){
+  html{scroll-padding-top:74px}.wrap,.search-panel{width:calc(100% - 40px)}.section{padding:72px 0}.topline .wrap{justify-content:center}.topline .wrap span:first-child{display:none}.main-nav{min-height:65px}.nav{position:absolute;top:100%;right:0;left:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:10px 20px 18px;background:var(--paper);border-bottom:1px solid var(--line)}.nav.open{display:flex}.nav a{padding:11px 0}.nav a.active::after{right:auto;width:28px}.burger{display:block}.head-actions .btn{display:none}.hero,.hero .wrap{min-height:620px}.hero .wrap{padding:65px 0 155px}.hero h1{max-width:9ch}.hero__lead{font-size:16px}.hero__veil{background:linear-gradient(90deg,rgba(10,35,37,.86),rgba(10,35,37,.40))}.hero__trust{right:20px;bottom:23px;left:20px;justify-content:space-around;gap:10px}.hero__trust b{font-size:23px}.search-panel{margin-top:-25px;padding:13px}.search-panel form{grid-template-columns:1fr 1fr}.search-panel .search-field{padding:8px;border-right:0}.search-panel .btn{grid-column:span 2}.sec-head{flex-direction:column;align-items:flex-start;margin-bottom:30px}.tour-grid,.tour-list,.benefit-grid,.format-grid,.destinations,.values,.post-grid,.faq{grid-template-columns:1fr}.tour-intro,.experience,.review-wrap,.about-story,.contact-layout,.contact-form .wrap{grid-template-columns:1fr;gap:30px}.tour-intro .note{grid-column:auto}.experience__photo{min-height:300px}.experience__copy{padding:38px 25px}.experience__facts{gap:12px}.review-card{padding:27px}.review-card blockquote{font-size:25px}.page-hero{padding:62px 0 55px}.page-hero p{font-size:16px}.contact-map{min-height:390px}.contact-form{padding:70px 0}.cta-band{padding:52px 0}.cta-band .wrap{align-items:flex-start;flex-direction:column}.foot-top{grid-template-columns:1fr 1fr;gap:33px}.foot-top>div:first-child,.foot-top>div:last-child{grid-column:span 2}.foot-bot{flex-direction:column}.modal-box{padding:32px 21px}.tour-card{min-height:430px}
 }
+@media(max-width:390px){.hero h1{font-size:45px}.logo-type b{font-size:17px}.search-panel form{grid-template-columns:1fr}.search-panel .btn{grid-column:auto}.foot-top{grid-template-columns:1fr}.foot-top>div:first-child,.foot-top>div:last-child{grid-column:auto}}

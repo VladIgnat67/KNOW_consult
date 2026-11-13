@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>KNOW consult — консалтинг для бизнеса</title>
-  <meta name="description" content="KNOW consult — консалтинг для бизнеса в Бишкеке: стратегия, процессы, финансы и команда.">
+  <title>MIRA travel — путешествия в вашем ритме</title>
+  <meta name="description" content="MIRA travel — авторские путешествия, пляжный отдых и маршруты под ключ из Бишкека.">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -16,94 +16,50 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body data-page="home">
-
   <div data-include="header"></div>
-
   <main>
-      <div class="hero">
-        <div class="wrap">
-          <div>
-            <h1>Знания, которые работают на ваш бизнес</h1>
-            <p class="lead">Помогаем компаниям в Кыргызстане выстроить стратегию, навести порядок в процессах и финансах и расти без лишних потерь.</p>
-            <div class="actions">
-              <button class="btn btn-primary" type="button" data-consult>Получить консультацию</button>
-              <a class="btn btn-secondary" href="services.html">Наши услуги</a>
-            </div>
-          </div>
-          <div class="hero-panel">
-            <div class="hero-frame" aria-hidden="true"></div>
-            <div class="hero-quote">
-              <p>«Говорим просто о сложном и доводим каждую задачу до результата»</p>
-              <span>Команда KNOW consult</span>
-            </div>
-            <div class="hero-note">Первая консультация бесплатно</div>
-          </div>
-        </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media"><img src="assets/img/hero-travel.jpg" alt="Горное озеро и заснеженные вершины на рассвете"></div>
+      <div class="hero__veil"></div>
+      <div class="wrap">
+        <p class="eyebrow">Travel atelier из Бишкека</p>
+        <h1 id="hero-title">Путешествия, которые остаются с вами</h1>
+        <p class="hero__lead">Подбираем не просто билеты и отели — собираем маршрут под ваш темп, интересы и самое важное «хочу».</p>
+        <div class="hero__actions"><button class="btn btn-primary" type="button" data-consult>Подобрать путешествие <span class="arrow">→</span></button><a class="btn btn-light" href="services.html">Смотреть туры</a></div>
       </div>
+      <div class="hero__trust" aria-label="Наш опыт"><div><b>10 лет</b><span>заботы о поездках</span></div><div><b>32 страны</b><span>проверенных маршрута</span></div><div><b>1:1</b><span>внимание к деталям</span></div></div>
+    </section>
 
-            <div class="stats">
-        <div class="wrap">
-          <div><strong>10+</strong><span>лет работаем с бизнесом</span></div>
-          <div><strong>250+</strong><span>завершённых проектов</span></div>
-          <div><strong>15</strong><span>экспертов в команде</span></div>
-          <div><strong>98%</strong><span>клиентов рекомендуют нас</span></div>
-        </div>
-      </div>
+    <section class="search-panel" aria-label="Быстрый подбор путешествия">
+      <form><div class="search-field"><label for="where">Куда хотите?</label><select id="where"><option>Выбрать направление</option><option>Пляжный отдых</option><option>Европа</option><option>Кыргызстан</option></select></div><div class="search-field"><label for="when">Когда?</label><select id="when"><option>Любые даты</option><option>Ближайший месяц</option><option>Этой зимой</option></select></div><div class="search-field"><label for="with">Кто едет?</label><select id="with"><option>1–2 человека</option><option>Семья с детьми</option><option>Компания друзей</option></select></div><button type="button" class="btn btn-primary" data-consult>Найти тур</button></form>
+    </section>
 
-      <div class="section tint">
-        <div class="wrap">
-          <div class="sec-head">
-            <div><h2>Чем мы помогаем</h2><p>Берём задачу целиком: от диагностики до внедрения и проверки результата.</p></div>
-            <a class="btn btn-secondary" href="services.html">Все услуги</a>
-          </div>
-          <div class="grid3" id="home-services"></div>
-        </div>
+    <section class="section" id="tours">
+      <div class="wrap">
+        <div class="sec-head"><div><p class="section-kicker">Готовые идеи</p><h2>Туры с характером</h2></div><a class="btn btn-outline" href="services.html">Все предложения <span class="arrow">→</span></a></div>
+        <div class="tour-grid" id="home-tours"></div>
       </div>
+    </section>
 
-      <div class="section">
-        <div class="wrap">
-          <div class="sec-head"><div><h2>Как мы работаем</h2><p>Четыре этапа, понятные сроки и отчёт на каждом шаге.</p></div></div>
-          <div class="steps">
-            <div class="step"><span class="num">1</span><h3>Знакомство</h3><p>Встречаемся, разбираем задачу и текущую ситуацию в компании. Бесплатно.</p></div>
-            <div class="step"><span class="num">2</span><h3>Диагностика</h3><p>Изучаем данные и процессы, находим узкие места и готовим план работ.</p></div>
-            <div class="step"><span class="num">3</span><h3>Внедрение</h3><p>Вместе с вашей командой меняем процессы, документы и систему управления.</p></div>
-            <div class="step"><span class="num">4</span><h3>Результат</h3><p>Сверяем цифры с целями и остаёмся на связи, пока изменения не приживутся.</p></div>
-          </div>
-        </div>
+    <section class="section section--sand">
+      <div class="wrap tour-intro">
+        <div><p class="section-kicker">Не конвейер</p><h2>Планируем как для близких</h2></div>
+        <div class="text"><p>От первой идеи до посадочного талона — на связи один менеджер, который знает ваш маршрут целиком. Мы заранее объясняем нюансы, предлагаем только то, что выбрали бы сами, и всегда оставляем место для настоящих впечатлений.</p></div>
+        <div class="note">«Хорошая поездка — та, в которой вам было легко быть собой»</div>
       </div>
+    </section>
 
-      <div class="section tint">
-        <div class="wrap">
-          <div class="sec-head"><div><h2>Результаты клиентов</h2><p>Несколько проектов последних лет.</p></div><a class="btn btn-secondary" href="cases.html">Все кейсы</a></div>
-          <div class="grid3" id="home-cases"></div>
-        </div>
-      </div>
+    <section class="section">
+      <div class="wrap"><div class="sec-head"><div><p class="section-kicker">Почему MIRA</p><h2>Внимание к важному</h2></div><p>Чтобы отпуск начинался не в аэропорту, а в момент, когда вы решили поехать.</p></div><div class="benefit-grid"><article class="benefit"><div class="benefit__icon">⌁</div><h3>Ваш ритм</h3><p>Не перегружаем программу. Оставляем время на любимый кофе, случайные повороты и отдых.</p></article><article class="benefit"><div class="benefit__icon">✦</div><h3>Честный подбор</h3><p>Рассказываем не только о плюсах: вы знаете, что ждёт вас в отеле и на маршруте.</p></article><article class="benefit"><div class="benefit__icon">↗</div><h3>Поддержка рядом</h3><p>Остаёмся на связи перед вылетом и в поездке — без роботов и долгого ожидания.</p></article></div></div>
+    </section>
 
-      <div class="section">
-        <div class="wrap">
-          <div class="sec-head"><div><h2>Что говорят клиенты</h2></div></div>
-          <div class="grid2">
-            <figure class="review" style="margin:0"><blockquote>«За три месяца разобрались с учётом и наконец увидели, какие направления приносят прибыль, а какие нет. Решения теперь принимаем по цифрам, а не по ощущениям.»</blockquote><figcaption class="who"><span class="ava">АС</span><span><b>Айгерим С.</b><span>финансовый директор, торговая компания</span></span></figcaption></figure>
-            <figure class="review" style="margin:0"><blockquote>«Помогли описать процессы и распределить ответственность. Перестали тушить пожары каждый день, а новые сотрудники входят в работу за неделю.»</blockquote><figcaption class="who"><span class="ava">ТМ</span><span><b>Тимур М.</b><span>основатель, сеть сервисных центров</span></span></figcaption></figure>
-          </div>
-        </div>
-      </div>
+    <section class="section section--sand"><div class="wrap"><div class="experience"><div class="experience__photo"><img src="assets/img/card-bali.jpg" alt="Отдых в тропиках" loading="lazy"></div><div class="experience__copy"><p class="section-kicker">Индивидуальные маршруты</p><h2>Ваша история — не шаблон</h2><p>Хотите увидеть Японию во время цветения сакуры, провести медовый месяц на островах или собрать большое семейное путешествие? Начнём с разговора и соберём маршрут вокруг вас.</p><button class="btn btn-light" type="button" data-consult>Обсудить идею <span class="arrow">→</span></button><div class="experience__facts"><div><strong>24/7</strong><span>поддержка в поездке</span></div><div><strong>0%</strong><span>случайных решений</span></div></div></div></div></div></section>
 
-      <div class="section cta">
-        <div class="wrap">
-          <div><h2>Обсудим вашу задачу?</h2><p>Оставьте заявку: перезвоним в течение рабочего дня и предложим формат работы.</p></div>
-          <div class="form-slot"></div>
-        </div>
-      </div>
+    <section class="section"><div class="wrap review-wrap"><div><p class="section-kicker">Слова путешественников</p><h2>Самые ценные открытки — в памяти</h2></div><figure class="review-card"><blockquote>«Мы сказали только: хотим море, тишину и никуда не бежать. В итоге вернулись не просто отдохнувшими, а будто прожили ещё одну маленькую жизнь.»</blockquote><figcaption><span class="review-ava">АИ</span><span><b>Айдана и Илья</b><br>отдыхали на Бали</span></figcaption></figure></div></section>
+
+    <section class="cta-band"><div class="wrap"><div><h2>Не знаете, с чего начать?</h2><p>Расскажите о мечте — остальное бережно соберём мы.</p></div><button class="btn btn-light" type="button" data-consult>Получить подборку <span class="arrow">→</span></button></div></section>
   </main>
-
   <div data-include="footer"></div>
-
-  <script src="js/config.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/render.js"></script>
-  <script src="js/mail.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/config.js"></script><script src="js/data.js"></script><script src="js/layout.js"></script><script src="js/render.js"></script><script src="js/mail.js"></script><script src="js/form.js"></script>
 </body>
 </html>

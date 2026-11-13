@@ -3,9 +3,17 @@
    Используется в блоках .form-slot и в окне «Консультация».
    ========================================================== */
 
+let formInstance = 0;
 function setupForm(container, subject) {
   const form = container.querySelector('.form');
   const ok = container.querySelector('.success');
+  // У каждого экземпляра формы свои id: на странице и в модальном окне.
+  const instance = ++formInstance;
+  form.querySelectorAll('.field input, .field textarea').forEach((field, index) => {
+    const id = `lead-${field.name}-${instance}-${index}`;
+    field.id = id;
+    field.closest('.field').querySelector('label').htmlFor = id;
+  });
   const btn = form.querySelector('[data-send]');
   const status = form.querySelector('.form-status');
 
@@ -32,14 +40,14 @@ function setupForm(container, subject) {
       status.textContent = e.message;
       status.classList.add('err-text');
     } finally {
-      btn.disabled = false; btn.textContent = 'Отправить заявку';
+      btn.disabled = false; btn.innerHTML = 'Получить варианты <span class="arrow">→</span>';
     }
   });
 }
 
 document.querySelectorAll('.form-slot').forEach(slot => {
   slot.innerHTML = FORM_HTML;
-  setupForm(slot, 'Новая заявка с сайта KNOW consult');
+  setupForm(slot, 'Новая заявка с сайта MIRA travel');
 });
 
 /* ---------- Окно «Консультация» ---------- */
@@ -49,12 +57,12 @@ modal.hidden = true;
 modal.innerHTML = `
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" type="button" aria-label="Закрыть">×</button>
-    <h2 id="modal-title">Бесплатная консультация</h2>
-    <p class="modal-lead">Оставьте имя и телефон — перезвоним в течение рабочего дня.</p>
+    <h2 id="modal-title">Подберём путешествие</h2>
+    <p class="modal-lead">Оставьте имя и телефон — уточним детали и предложим варианты.</p>
     ${FORM_HTML}
   </div>`;
 document.body.appendChild(modal);
-setupForm(modal, 'Запрос консультации с сайта KNOW consult');
+setupForm(modal, 'Запрос на подбор тура с сайта MIRA travel');
 
 let lastFocus = null;
 function openModal() {

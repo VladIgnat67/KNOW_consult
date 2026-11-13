@@ -3,7 +3,7 @@
    Бесплатно, без регистрации и без своего сервера.
    ========================================================== */
 
-async function sendLead(fields, subject = 'Новая заявка с сайта KNOW consult') {
+async function sendLead(fields, subject = 'Новая заявка с сайта MIRA travel') {
   if (!CONTACT_EMAIL || CONTACT_EMAIL.includes('ВАШ_EMAIL')) {
     throw new Error('Не указан email для заявок. Откройте js/config.js и впишите свой адрес.');
   }
@@ -44,7 +44,7 @@ if (typeof SHOW_TEST_BUTTON !== 'undefined' && SHOW_TEST_BUTTON) {
   t.addEventListener('click', async () => {
     t.disabled = true; t.textContent = 'Отправляю…';
     try {
-      await sendLead({ 'Имя': 'Тестовая заявка', 'Телефон': '+996 000 000 000', 'Задача': 'Проверка отправки писем с сайта' }, 'ТЕСТ: заявка с сайта KNOW consult');
+      await sendLead({ 'Имя': 'Тестовая заявка', 'Телефон': '+996 000 000 000', 'Задача': 'Проверка отправки писем с сайта' }, 'ТЕСТ: заявка с сайта MIRA travel');
       t.textContent = 'Письмо отправлено ✓';
       t.classList.add('ok');
     } catch (e) {
