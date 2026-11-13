@@ -1,65 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>MIRA travel — путешествия в вашем ритме</title>
-  <meta name="description" content="MIRA travel — авторские путешествия, пляжный отдых и маршруты под ключ из Бишкека.">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body data-page="home">
-  <div data-include="header"></div>
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media"><img src="assets/img/hero-travel.jpg" alt="Горное озеро и заснеженные вершины на рассвете"></div>
-      <div class="hero__veil"></div>
-      <div class="wrap">
-        <p class="eyebrow">Travel atelier из Бишкека</p>
-        <h1 id="hero-title">Путешествия, которые остаются с вами</h1>
-        <p class="hero__lead">Подбираем не просто билеты и отели — собираем маршрут под ваш темп, интересы и самое важное «хочу».</p>
-        <div class="hero__actions"><button class="btn btn-primary" type="button" data-consult>Подобрать путешествие <span class="arrow">→</span></button><a class="btn btn-light" href="services.html">Смотреть туры</a></div>
-      </div>
-      <div class="hero__trust" aria-label="Наш опыт"><div><b>10 лет</b><span>заботы о поездках</span></div><div><b>32 страны</b><span>проверенных маршрута</span></div><div><b>1:1</b><span>внимание к деталям</span></div></div>
-    </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>KNOW consult travel — путешествия в вашем ритме</title>
+    <meta
+      name="description"
+      content="KNOW consult travel — авторские путешествия, пляжный отдых и маршруты под ключ из Бишкека."
+    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="home">
+    <div data-include="header"></div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <img
+            src="assets/img/hero-travel.jpg"
+            alt="Горное озеро и заснеженные вершины на рассвете"
+          />
+        </div>
+        <div class="hero__veil"></div>
+        <div class="wrap">
+          <p class="eyebrow">Туристическое направление KNOW consult</p>
+          <h1 id="hero-title">Путешествия, продуманные до деталей</h1>
+          <p class="hero__lead">
+            Экспертиза KNOW consult — теперь и в путешествиях: подбираем не
+            просто билеты и отели, а маршрут под ваш темп, интересы и самое
+            важное «хочу».
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn-primary" type="button" data-consult>
+              Подобрать путешествие <span class="arrow">→</span></button
+            ><a class="btn btn-light" href="services.html">Смотреть туры</a>
+          </div>
+        </div>
+        <div class="hero__trust" aria-label="Наш опыт">
+          <div><b>10 лет</b><span>заботы о поездках</span></div>
+          <div><b>32 страны</b><span>проверенных маршрута</span></div>
+          <div><b>1:1</b><span>внимание к деталям</span></div>
+        </div>
+      </section>
 
-    <section class="search-panel" aria-label="Быстрый подбор путешествия">
-      <form><div class="search-field"><label for="where">Куда хотите?</label><select id="where"><option>Выбрать направление</option><option>Пляжный отдых</option><option>Европа</option><option>Кыргызстан</option></select></div><div class="search-field"><label for="when">Когда?</label><select id="when"><option>Любые даты</option><option>Ближайший месяц</option><option>Этой зимой</option></select></div><div class="search-field"><label for="with">Кто едет?</label><select id="with"><option>1–2 человека</option><option>Семья с детьми</option><option>Компания друзей</option></select></div><button type="button" class="btn btn-primary" data-consult>Найти тур</button></form>
-    </section>
+      <section class="search-panel" aria-label="Быстрый подбор путешествия">
+        <form>
+          <div class="search-field">
+            <label for="where">Куда хотите?</label
+            ><select id="where">
+              <option>Выбрать направление</option>
+              <option>Пляжный отдых</option>
+              <option>Европа</option>
+              <option>Кыргызстан</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="when">Когда?</label
+            ><select id="when">
+              <option>Любые даты</option>
+              <option>Ближайший месяц</option>
+              <option>Этой зимой</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="with">Кто едет?</label
+            ><select id="with">
+              <option>1–2 человека</option>
+              <option>Семья с детьми</option>
+              <option>Компания друзей</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" data-consult>
+            Найти тур
+          </button>
+        </form>
+      </section>
 
-    <section class="section" id="tours">
-      <div class="wrap">
-        <div class="sec-head"><div><p class="section-kicker">Готовые идеи</p><h2>Туры с характером</h2></div><a class="btn btn-outline" href="services.html">Все предложения <span class="arrow">→</span></a></div>
-        <div class="tour-grid" id="home-tours"></div>
-      </div>
-    </section>
+      <section class="section" id="tours">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <p class="section-kicker">Готовые идеи</p>
+              <h2>Туры с характером</h2>
+            </div>
+            <a class="btn btn-outline" href="services.html"
+              >Все предложения <span class="arrow">→</span></a
+            >
+          </div>
+          <div class="tour-grid" id="home-tours"></div>
+        </div>
+      </section>
 
-    <section class="section section--sand">
-      <div class="wrap tour-intro">
-        <div><p class="section-kicker">Не конвейер</p><h2>Планируем как для близких</h2></div>
-        <div class="text"><p>От первой идеи до посадочного талона — на связи один менеджер, который знает ваш маршрут целиком. Мы заранее объясняем нюансы, предлагаем только то, что выбрали бы сами, и всегда оставляем место для настоящих впечатлений.</p></div>
-        <div class="note">«Хорошая поездка — та, в которой вам было легко быть собой»</div>
-      </div>
-    </section>
+      <section class="section section--sand">
+        <div class="wrap tour-intro">
+          <div>
+            <p class="section-kicker">Не конвейер</p>
+            <h2>Планируем как для близких</h2>
+          </div>
+          <div class="text">
+            <p>
+              Подход KNOW consult — это ясность в деталях и ответственность за
+              результат. От первой идеи до посадочного талона на связи один
+              менеджер, который знает ваш маршрут целиком.
+            </p>
+          </div>
+          <div class="note">
+            «Хорошая поездка — та, в которой вам было легко быть собой»
+          </div>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="wrap"><div class="sec-head"><div><p class="section-kicker">Почему MIRA</p><h2>Внимание к важному</h2></div><p>Чтобы отпуск начинался не в аэропорту, а в момент, когда вы решили поехать.</p></div><div class="benefit-grid"><article class="benefit"><div class="benefit__icon">⌁</div><h3>Ваш ритм</h3><p>Не перегружаем программу. Оставляем время на любимый кофе, случайные повороты и отдых.</p></article><article class="benefit"><div class="benefit__icon">✦</div><h3>Честный подбор</h3><p>Рассказываем не только о плюсах: вы знаете, что ждёт вас в отеле и на маршруте.</p></article><article class="benefit"><div class="benefit__icon">↗</div><h3>Поддержка рядом</h3><p>Остаёмся на связи перед вылетом и в поездке — без роботов и долгого ожидания.</p></article></div></div>
-    </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <p class="section-kicker">Почему KNOW consult</p>
+              <h2>Внимание к важному</h2>
+            </div>
+            <p>
+              Чтобы отпуск начинался не в аэропорту, а в момент, когда вы решили
+              поехать.
+            </p>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit">
+              <div class="benefit__icon">⌁</div>
+              <h3>Ваш ритм</h3>
+              <p>
+                Не перегружаем программу. Оставляем время на любимый кофе,
+                случайные повороты и отдых.
+              </p>
+            </article>
+            <article class="benefit">
+              <div class="benefit__icon">✦</div>
+              <h3>Честный подбор</h3>
+              <p>
+                Рассказываем не только о плюсах: вы знаете, что ждёт вас в отеле
+                и на маршруте.
+              </p>
+            </article>
+            <article class="benefit">
+              <div class="benefit__icon">↗</div>
+              <h3>Поддержка рядом</h3>
+              <p>
+                Остаёмся на связи перед вылетом и в поездке — без роботов и
+                долгого ожидания.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="section section--sand"><div class="wrap"><div class="experience"><div class="experience__photo"><img src="assets/img/card-bali.jpg" alt="Отдых в тропиках" loading="lazy"></div><div class="experience__copy"><p class="section-kicker">Индивидуальные маршруты</p><h2>Ваша история — не шаблон</h2><p>Хотите увидеть Японию во время цветения сакуры, провести медовый месяц на островах или собрать большое семейное путешествие? Начнём с разговора и соберём маршрут вокруг вас.</p><button class="btn btn-light" type="button" data-consult>Обсудить идею <span class="arrow">→</span></button><div class="experience__facts"><div><strong>24/7</strong><span>поддержка в поездке</span></div><div><strong>0%</strong><span>случайных решений</span></div></div></div></div></div></section>
+      <section class="section section--sand">
+        <div class="wrap">
+          <div class="experience">
+            <div class="experience__photo">
+              <img
+                src="assets/img/card-bali.jpg"
+                alt="Отдых в тропиках"
+                loading="lazy"
+              />
+            </div>
+            <div class="experience__copy">
+              <p class="section-kicker">Индивидуальные маршруты</p>
+              <h2>Ваша история — не шаблон</h2>
+              <p>
+                Хотите увидеть Японию во время цветения сакуры, провести медовый
+                месяц на островах или собрать большое семейное путешествие?
+                Начнём с разговора и соберём маршрут вокруг вас.
+              </p>
+              <button class="btn btn-light" type="button" data-consult>
+                Обсудить идею <span class="arrow">→</span>
+              </button>
+              <div class="experience__facts">
+                <div><strong>24/7</strong><span>поддержка в поездке</span></div>
+                <div><strong>0%</strong><span>случайных решений</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="section"><div class="wrap review-wrap"><div><p class="section-kicker">Слова путешественников</p><h2>Самые ценные открытки — в памяти</h2></div><figure class="review-card"><blockquote>«Мы сказали только: хотим море, тишину и никуда не бежать. В итоге вернулись не просто отдохнувшими, а будто прожили ещё одну маленькую жизнь.»</blockquote><figcaption><span class="review-ava">АИ</span><span><b>Айдана и Илья</b><br>отдыхали на Бали</span></figcaption></figure></div></section>
+      <section class="section">
+        <div class="wrap review-wrap">
+          <div>
+            <p class="section-kicker">Слова путешественников</p>
+            <h2>Самые ценные открытки — в памяти</h2>
+          </div>
+          <figure class="review-card">
+            <blockquote>
+              «Мы сказали только: хотим море, тишину и никуда не бежать. В итоге
+              вернулись не просто отдохнувшими, а будто прожили ещё одну
+              маленькую жизнь.»
+            </blockquote>
+            <figcaption>
+              <span class="review-ava">АИ</span
+              ><span><b>Айдана и Илья</b><br />отдыхали на Бали</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <section class="cta-band"><div class="wrap"><div><h2>Не знаете, с чего начать?</h2><p>Расскажите о мечте — остальное бережно соберём мы.</p></div><button class="btn btn-light" type="button" data-consult>Получить подборку <span class="arrow">→</span></button></div></section>
-  </main>
-  <div data-include="footer"></div>
-  <script src="js/config.js"></script><script src="js/data.js"></script><script src="js/layout.js"></script><script src="js/render.js"></script><script src="js/mail.js"></script><script src="js/form.js"></script>
-</body>
+      <section class="cta-band">
+        <div class="wrap">
+          <div>
+            <h2>Не знаете, с чего начать?</h2>
+            <p>Расскажите о мечте — остальное бережно соберём мы.</p>
+          </div>
+          <button class="btn btn-light" type="button" data-consult>
+            Получить подборку <span class="arrow">→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <div data-include="footer"></div>
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="js/form.js"></script>
+  </body>
 </html>

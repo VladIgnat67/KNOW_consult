@@ -1,21 +1,109 @@
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:105px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
-body.modal-open{overflow:hidden}
-img,svg{display:block;max-width:100%}
-a{color:inherit}
-h1,h2,h3,h4,p{margin:0}
-h1,h2,h3{font-family:var(--head);font-weight:600;letter-spacing:-.035em;line-height:1.04}
-h1{font-size:clamp(48px,6vw,82px)}
-h2{font-size:clamp(34px,4vw,56px)}
-h3{font-size:26px}
-button,input,textarea{font:inherit}
-button{cursor:pointer}
-.wrap{width:min(1200px,calc(100% - 64px));margin-inline:auto}
-.section{padding:110px 0}
-.section--sand{background:var(--sand)}
-.section-kicker{display:flex;align-items:center;gap:10px;color:var(--coral);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-bottom:16px}
-.section-kicker::before{content:"";width:26px;height:1px;background:currentColor}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px}
-.sec-head p{max-width:44ch;color:var(--muted);font-size:17px}
-:focus-visible{outline:3px solid var(--sun);outline-offset:4px}
+/* ==========================================================
+   База: сетка, типографика и общие блоки
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font: 400 16px/1.58 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+body.modal-open {
+  overflow: hidden;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--head);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.17;
+}
+h1 {
+  font-size: clamp(42px, 5.5vw, 68px);
+}
+h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+}
+h3 {
+  font-size: 23px;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+.wrap {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+}
+.section {
+  padding: 92px 0;
+}
+.section--sand {
+  background: var(--surface);
+}
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.section-kicker::before {
+  width: 27px;
+  height: 3px;
+  background: var(--lime);
+  content: "";
+}
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 42px;
+}
+.sec-head p {
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 3px;
+}
