@@ -1,32 +1,22 @@
-/* ==========================================================
-   Переменные: цвета, скругления, шрифты (как в Figma: KNOW / Colors)
-   ========================================================== */
-
+/* Цветовая система MIRA travel */
 :root{
-  --primary-500:#A633BD; --primary-600:#8E25A3; --primary-700:#5E1C6E; --primary-100:#F1E2F5; --primary-50:#FBF7FC;
-  --accent-500:#91C01D; --accent-600:#7CA614;
-  --neutral-900:#1A1A18; --neutral-600:#6B6470; --neutral-400:#A39AA8; --neutral-300:#D9C8DE; --neutral-100:#F3EFF4; --neutral-0:#FFFFFF;
-  --error-500:#D93636; --error-100:#FCE8E8;
-  --bg:#FFFFFF; --surface:#FBF7FC; --soft:#F1E2F5; --card:#FFFFFF; --text:#1A1A18; --muted:#6B6470; --line:#E7DCEA;
-  --brand:#A633BD; --brand-hover:#8E25A3; --brand-ink:#5E1C6E; --on-brand:#FFFFFF; --deep:#5E1C6E; --on-deep:#FFFFFF; --deep-muted:#E2C9E9;
-  --r-sm:8px; --r-md:12px; --r-lg:20px; --r-xl:28px;
-  --head:"Comfortaa", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
-  --body:"Montserrat", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-  color-scheme: light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#170C1B; --surface:#1F1124; --soft:#2E1836; --card:#24142A; --text:#F5EEF7; --muted:#B7A9BD; --line:#3A2442;
-    --brand:#B94BD0; --brand-hover:#C866DC; --brand-ink:#E7C4EF; --on-brand:#FFFFFF; --deep:#2A1031; --on-deep:#FFFFFF; --deep-muted:#CDB2D5;
-    --error-100:#3A1717;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#170C1B; --surface:#1F1124; --soft:#2E1836; --card:#24142A; --text:#F5EEF7; --muted:#B7A9BD; --line:#3A2442;
-  --brand:#B94BD0; --brand-hover:#C866DC; --brand-ink:#E7C4EF; --on-brand:#FFFFFF; --deep:#2A1031; --on-deep:#FFFFFF; --deep-muted:#CDB2D5;
-  --error-100:#3A1717;
+  --ink:#173b3d;
+  --ink-deep:#0e292c;
+  --muted:#667879;
+  --paper:#fffdf8;
+  --sand:#f4f0e6;
+  --sand-deep:#e7dfcf;
+  --mint:#d9e6df;
+  --line:rgba(23,59,61,.14);
+  --coral:#e76743;
+  --coral-dark:#cc5132;
+  --sun:#f6c862;
+  --white:#fff;
+  --r-sm:14px;
+  --r-md:22px;
+  --r-lg:32px;
+  --r-pill:999px;
+  --head:"Playfair Display", Georgia, serif;
+  --body:"Manrope", "Segoe UI", Arial, sans-serif;
+  color-scheme:light;
 }

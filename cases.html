@@ -1,37 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Кейсы — KNOW consult</title>
-  <meta name="description" content="Кейсы KNOW consult: задачи клиентов и результаты.">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Направления — MIRA travel</title><meta name="description" content="Направления для путешествий с MIRA travel: Бали, Турция, Италия и Кыргызстан.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="cases">
-
-  <div data-include="header"></div>
-
-  <main>
-      <div class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Кейсы</div><h1>Кейсы</h1><p>Задачи, которые мы решали, и результаты, которые получили клиенты.</p><div class="filters" id="case-filters"></div></div></div>
-      <div class="section"><div class="wrap"><div class="case-list" id="case-list"></div></div></div>
-      <div class="section cta"><div class="wrap"><div><h2>Похожая задача?</h2><p>Оставьте заявку, и мы расскажем, как подойдём к ней.</p></div><div class="form-slot"></div></div></div>
-  </main>
-
-  <div data-include="footer"></div>
-
-  <script src="js/config.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/render.js"></script>
-  <script src="js/mail.js"></script>
-  <script src="js/form.js"></script>
-</body>
-</html>
+<body data-page="destinations"><div data-include="header"></div>
+<main>
+  <section class="page-hero"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Направления</div><h1>Места, к которым тянет</h1><p>Собрали направления, которые любим сами. Здесь есть и первые впечатления, и маршруты для тех, кто уже многое видел.</p></div></section>
+  <section class="section"><div class="wrap"><div class="sec-head"><div><p class="section-kicker">Выбирайте настроение</p><h2>Откройте свой горизонт</h2></div><p>Нажмите на понравившийся образ — и мы подскажем подходящий сезон, формат и бюджет.</p></div><div class="destinations" id="destination-list"></div></div></section>
+  <section class="section section--sand"><div class="wrap"><div class="experience"><div class="experience__photo"><img src="assets/img/hero-travel.jpg" alt="Горное озеро в Кыргызстане" loading="lazy"></div><div class="experience__copy"><p class="section-kicker">Кыргызстан</p><h2>Красота совсем рядом</h2><p>Иногда лучшее приключение начинается в нескольких часах от дома. Собираем частные выезды к озёрам, в ущелья и в места, где ночью видно все звёзды.</p><button class="btn btn-light" type="button" data-consult>Хочу в горы <span class="arrow">→</span></button><div class="experience__facts"><div><strong>4 сезона</strong><span>для поездок по стране</span></div><div><strong>1 день</strong><span>на организацию маршрута</span></div></div></div></div></div></section>
+  <section class="section"><div class="wrap review-wrap"><div><p class="section-kicker">Как выбираем</p><h2>Сначала слушаем, потом бронируем</h2></div><figure class="review-card"><blockquote>«У одного места может быть десяток лиц. Мы помогаем найти именно то, которое совпадёт с вашим настроением прямо сейчас.»</blockquote><figcaption><span class="review-ava">М</span><span><b>Команда MIRA</b><br>проверяем направления лично</span></figcaption></figure></div></section>
+  <section class="cta-band"><div class="wrap"><div><h2>Есть место на карте, которое не отпускает?</h2><p>Расскажите нам о нём — соберём путь туда.</p></div><button class="btn btn-light" type="button" data-consult>Обсудить маршрут <span class="arrow">→</span></button></div></section>
+</main>
+<div data-include="footer"></div><script src="js/config.js"></script><script src="js/data.js"></script><script src="js/layout.js"></script><script src="js/render.js"></script><script src="js/mail.js"></script><script src="js/form.js"></script>
+</body></html>
