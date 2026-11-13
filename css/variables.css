@@ -1,22 +1,27 @@
-/* Цветовая система MIRA travel */
-:root{
-  --ink:#173b3d;
-  --ink-deep:#0e292c;
-  --muted:#667879;
-  --paper:#fffdf8;
-  --sand:#f4f0e6;
-  --sand-deep:#e7dfcf;
-  --mint:#d9e6df;
-  --line:rgba(23,59,61,.14);
-  --coral:#e76743;
-  --coral-dark:#cc5132;
-  --sun:#f6c862;
-  --white:#fff;
-  --r-sm:14px;
-  --r-md:22px;
-  --r-lg:32px;
-  --r-pill:999px;
-  --head:"Playfair Display", Georgia, serif;
-  --body:"Manrope", "Segoe UI", Arial, sans-serif;
-  color-scheme:light;
+/* ==========================================================
+   KNOW consult travel — фирменная система из moodboard
+   ========================================================== */
+
+:root {
+  --primary: #a633bd;
+  --primary-hover: #8e25a3;
+  --primary-deep: #5e1c6e;
+  --lavender: #f1e2f5;
+  --surface: #fbf7fc;
+  --lime: #91c01d;
+  --lime-dark: #7ca614;
+  --ink: #1a1a18;
+  --muted: #6b6470;
+  --line: #e7dcea;
+  --white: #ffffff;
+  --error: #d93636;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  --head: "Comfortaa", "Trebuchet MS", "Segoe UI", sans-serif;
+  --body: "Montserrat", "Segoe UI", Arial, sans-serif;
+  color-scheme: light;
 }
