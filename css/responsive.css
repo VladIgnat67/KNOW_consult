@@ -1,22 +1,21 @@
 /* ==========================================================
-   Адаптивная вёрстка: планшеты и телефоны
+   Адаптивная вёрстка
    ========================================================== */
 
 @media (max-width: 1080px) {
   .nav {
-    gap: 16px;
+    gap: 15px;
   }
   .head-actions .phone {
     display: none;
   }
-  .tour-grid,
-  .tour-list,
-  .destinations,
+  .service-grid,
+  .service-list,
   .post-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .experience__copy {
-    padding: 45px;
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .foot-top {
     grid-template-columns: 1.4fr 1fr 1fr;
@@ -24,9 +23,11 @@
   .foot-top > div:last-child {
     grid-column: span 2;
   }
-  .about-story,
-  .contact-layout {
-    gap: 40px;
+  .education-split__copy,
+  .course-feature__head,
+  .course-feature .course-grid {
+    padding-left: 42px;
+    padding-right: 42px;
   }
 }
 
@@ -35,7 +36,7 @@
     scroll-padding-top: 72px;
   }
   .wrap,
-  .search-panel {
+  .service-jump {
     width: calc(100% - 40px);
   }
   .section {
@@ -60,8 +61,8 @@
     align-items: stretch;
     gap: 0;
     padding: 10px 20px 18px;
-    background: var(--white);
     border-bottom: 1px solid var(--line);
+    background: var(--white);
   }
   .nav.open {
     display: flex;
@@ -79,6 +80,7 @@
   .head-actions .btn {
     display: none;
   }
+
   .hero,
   .hero .wrap {
     min-height: 600px;
@@ -87,7 +89,7 @@
     padding: 63px 0 148px;
   }
   .hero h1 {
-    max-width: 9ch;
+    max-width: 10ch;
   }
   .hero__lead {
     font-size: 16px;
@@ -95,8 +97,8 @@
   .hero__veil {
     background: linear-gradient(
       90deg,
-      rgba(47, 12, 56, 0.9),
-      rgba(70, 19, 82, 0.44)
+      rgba(53, 13, 63, 0.92),
+      rgba(73, 18, 86, 0.47)
     );
   }
   .hero::after {
@@ -106,72 +108,89 @@
     height: 220px;
     border-width: 11px;
   }
-  .hero__trust {
+  .hero__facts {
     right: 20px;
     bottom: 22px;
     left: 20px;
     justify-content: space-around;
     gap: 10px;
   }
-  .hero__trust b {
+  .hero__facts b {
     font-size: 21px;
   }
-  .search-panel {
+
+  .service-jump {
     margin-top: -25px;
-    padding: 13px;
+    padding: 14px;
   }
-  .search-panel form {
-    grid-template-columns: 1fr 1fr;
+  .service-jump__links {
+    gap: 7px;
   }
-  .search-panel .search-field {
-    padding: 8px;
-    border-right: 0;
-  }
-  .search-panel .btn {
-    grid-column: span 2;
+  .service-jump__links a {
+    padding: 7px 9px;
+    font-size: 10px;
   }
   .sec-head {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 30px;
   }
-  .tour-grid,
-  .tour-list,
-  .benefit-grid,
+
+  .company-intro,
+  .education-split,
+  .education-lead,
+  .about-story,
+  .contact-layout,
+  .contact-form .wrap,
+  .course-inline {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .service-grid,
+  .service-list,
+  .course-grid,
+  .process-grid,
   .format-grid,
-  .destinations,
-  .values,
   .post-grid,
   .faq {
     grid-template-columns: 1fr;
   }
-  .tour-intro,
-  .experience,
-  .review-wrap,
-  .about-story,
-  .contact-layout,
-  .contact-form .wrap {
-    grid-template-columns: 1fr;
-    gap: 30px;
+
+  .company-intro__note {
+    font-size: 22px;
   }
-  .tour-intro .note {
-    grid-column: auto;
+  .course-feature__head {
+    display: block;
+    padding: 36px 25px 24px;
   }
-  .experience__photo {
+  .course-feature__head p:last-child {
+    margin-top: 15px;
+  }
+  .course-feature .course-grid {
+    padding: 0 25px 25px;
+  }
+  .education-split__photo {
     min-height: 300px;
   }
-  .experience__copy {
+  .education-split__copy {
     padding: 38px 25px;
   }
-  .experience__facts {
-    gap: 12px;
+  .education-lead__photo {
+    min-height: 320px;
   }
-  .review-card {
-    padding: 27px;
+  .education-lead__photo::after {
+    width: 52px;
+    height: 104px;
+    border-width: 9px;
   }
-  .review-card blockquote {
-    font-size: 23px;
+  .course-inline {
+    padding: 30px 25px;
   }
+  .service-card,
+  .service-list .service-card {
+    min-height: auto;
+  }
+
   .page-hero {
     padding: 60px 0 53px;
   }
@@ -182,7 +201,7 @@
     min-height: 390px;
   }
   .contact-form {
-    padding: 65px 0;
+    padding: 64px 0;
   }
   .cta-band {
     padding: 52px 0;
@@ -205,23 +224,14 @@
   .modal-box {
     padding: 32px 21px;
   }
-  .tour-card {
-    min-height: 425px;
-  }
 }
 
 @media (max-width: 390px) {
   .hero h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
   .logo-type b {
     font-size: 17px;
-  }
-  .search-panel form {
-    grid-template-columns: 1fr;
-  }
-  .search-panel .btn {
-    grid-column: auto;
   }
   .foot-top {
     grid-template-columns: 1fr;

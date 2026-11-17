@@ -1,8 +1,8 @@
 /* ==========================================================
-   Компоненты: кнопки, навигация, карточки, формы, футер
+   Переиспользуемые компоненты
    ========================================================== */
 
-/* Buttons */
+/* Buttons and links */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -22,47 +22,73 @@
     border-color 0.18s,
     color 0.18s;
 }
+
 .btn:hover {
   transform: translateY(-2px);
 }
+
 .btn-primary {
   background: var(--primary);
-  color: var(--white);
   box-shadow: 0 10px 20px rgba(166, 51, 189, 0.2);
+  color: var(--white);
 }
+
 .btn-primary:hover {
   background: var(--primary-hover);
 }
+
 .btn-outline {
   border-color: var(--primary);
   background: transparent;
   color: var(--primary);
 }
+
 .btn-outline:hover {
   background: var(--lavender);
 }
+
 .btn-light {
-  border-color: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.7);
   background: transparent;
   color: var(--white);
 }
+
 .btn-light:hover {
   border-color: var(--lime);
   background: var(--lime);
   color: var(--ink);
 }
+
 .btn-small {
   min-height: 42px;
   padding: 10px 16px;
   font-size: 12px;
 }
-.arrow {
+
+.arrow,
+.text-link span {
   font-size: 19px;
   line-height: 0;
   transition: transform 0.18s;
 }
-.btn:hover .arrow {
+
+.btn:hover .arrow,
+.text-link:hover span {
   transform: translateX(3px);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: auto;
+  padding: 16px 0 0;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /* Header */
@@ -70,28 +96,33 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
 }
+
 .topline {
   background: var(--primary-deep);
   color: rgba(255, 255, 255, 0.82);
   font-size: 11px;
   font-weight: 600;
 }
+
 .topline .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 31px;
 }
+
 .topline a {
   text-decoration: none;
 }
+
 .topline a:hover {
   color: var(--lime);
 }
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -99,6 +130,7 @@
   gap: 24px;
   min-height: 76px;
 }
+
 .logo {
   display: inline-flex;
   align-items: center;
@@ -106,44 +138,50 @@
   color: var(--ink);
   text-decoration: none;
 }
+
 .logo-mark {
   position: relative;
   display: block;
   width: 42px;
   height: 42px;
-  overflow: hidden;
   border-radius: 10px;
   background: var(--primary);
 }
+
 .logo-mark::after {
   position: absolute;
   inset: 9px 15px;
   border: 3px solid var(--lime);
   content: "";
 }
+
 .logo-type {
   display: flex;
   flex-direction: column;
   line-height: 1;
 }
+
 .logo-type b {
   font-family: var(--head);
   font-size: 19px;
   letter-spacing: 0.04em;
 }
+
 .logo-type span {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-transform: lowercase;
 }
+
 .nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 24px;
 }
+
 .nav a {
   position: relative;
   padding: 8px 0;
@@ -152,10 +190,12 @@
   font-weight: 600;
   text-decoration: none;
 }
+
 .nav a:hover,
 .nav a.active {
   color: var(--primary);
 }
+
 .nav a.active::after {
   position: absolute;
   right: 0;
@@ -166,17 +206,20 @@
   background: var(--lime);
   content: "";
 }
+
 .head-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .phone {
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
 }
+
 .burger {
   display: none;
   width: 43px;
@@ -186,6 +229,7 @@
   border-radius: var(--r-sm);
   background: var(--lavender);
 }
+
 .burger i {
   display: block;
   width: 19px;
@@ -195,160 +239,170 @@
   background: var(--primary-deep);
 }
 
-/* Tour cards */
-.tour-grid,
-.tour-list {
+/* Service cards */
+.service-grid,
+.service-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
-.tour-card {
+
+.service-card {
   display: flex;
+  min-height: 390px;
   flex-direction: column;
-  min-height: 455px;
-  overflow: hidden;
+  padding: 29px;
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   background: var(--white);
-  color: var(--ink);
-  text-decoration: none;
   transition:
     border-color 0.2s,
     box-shadow 0.2s,
     transform 0.2s;
 }
-.tour-card:hover {
-  transform: translateY(-5px);
+
+.service-card:hover {
+  transform: translateY(-4px);
   border-color: var(--primary);
-  box-shadow: 0 14px 32px rgba(94, 28, 110, 0.12);
-}
-.tour-card__photo {
-  position: relative;
-  aspect-ratio: 1.38;
-  overflow: hidden;
-  background: var(--lavender);
-}
-.tour-card__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.45s;
-}
-.tour-card:hover .tour-card__photo img {
-  transform: scale(1.05);
-}
-.tour-card__badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 7px 11px;
-  border-radius: var(--r-pill);
-  background: var(--lime);
-  color: var(--ink);
-  font-size: 10px;
-  font-weight: 700;
-}
-.tour-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 22px;
-}
-.tour-card__country {
-  color: var(--primary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-.tour-card h3 {
-  margin: 8px 0 10px;
-  font-size: 25px;
-}
-.tour-card__meta {
-  color: var(--muted);
-  font-size: 13px;
-}
-.tour-card__bottom {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: auto;
-  padding-top: 17px;
-  border-top: 1px solid var(--line);
-}
-.price span {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-}
-.price b {
-  font-family: var(--head);
-  font-size: 21px;
-}
-.card-link {
-  color: var(--primary);
-  font-size: 12px;
-  font-weight: 700;
+  box-shadow: var(--shadow);
 }
 
-/* Benefit cards */
-.benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.benefit {
-  padding: 30px;
-  border: 1px solid var(--line);
-  border-radius: var(--r-md);
+.service-card--compact {
+  min-height: 320px;
   background: var(--surface);
 }
-.benefit__icon {
+
+.service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.service-card__number {
   display: grid;
-  width: 51px;
-  height: 51px;
-  margin-bottom: 22px;
+  width: 46px;
+  height: 40px;
   place-items: center;
   border: 3px solid var(--lime);
   color: var(--primary);
-  font-size: 22px;
+  font-family: var(--head);
+  font-size: 16px;
+  font-weight: 700;
 }
-.benefit h3 {
-  margin-bottom: 10px;
+
+.service-card__tag {
+  padding: 6px 10px;
+  border-radius: var(--r-pill);
+  background: var(--lavender);
+  color: var(--primary-deep);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
   font-size: 23px;
 }
-.benefit p {
+
+.service-card p {
   color: var(--muted);
   font-size: 14px;
 }
 
-/* Forms */
+.service-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-card li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.service-card li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 7px;
+  height: 10px;
+  border: 2px solid var(--lime);
+  content: "";
+}
+
+/* Course cards */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.course-card {
+  min-height: 198px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--white);
+}
+
+.course-card__code {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 5px 8px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.course-card h3 {
+  margin-bottom: 9px;
+  font-size: 18px;
+}
+
+.course-card p {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Standard form */
 .form {
   padding: 30px;
   border: 1px solid var(--line);
   border-top: 5px solid var(--lime);
   border-radius: var(--r-md);
   background: var(--white);
-  box-shadow: 0 16px 35px rgba(94, 28, 110, 0.1);
+  box-shadow: var(--shadow);
 }
+
 .form-title {
   font-family: var(--head);
-  font-size: 28px;
+  font-size: 27px;
   line-height: 1.2;
 }
+
 .form-caption {
   margin: 8px 0 20px;
   color: var(--muted);
   font-size: 13px;
 }
+
 .field {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-top: 13px;
 }
+
 .field label {
   color: var(--muted);
   font-size: 11px;
@@ -356,6 +410,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
 .field input,
 .field textarea {
   width: 100%;
@@ -366,27 +421,33 @@
   color: var(--ink);
   outline: none;
 }
+
 .field textarea {
   min-height: 86px;
   resize: vertical;
 }
+
 .field input:focus,
 .field textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(166, 51, 189, 0.12);
 }
+
 .field.err input,
 .field.err textarea {
   border-color: var(--error);
 }
+
 .help {
   display: none;
   color: var(--error);
   font-size: 11px;
 }
+
 .field.err .help {
   display: block;
 }
+
 .check {
   display: flex;
   align-items: flex-start;
@@ -396,25 +457,31 @@
   font-size: 11px;
   line-height: 1.4;
 }
+
 .check input {
   width: 16px;
   height: 16px;
   margin: 0;
   accent-color: var(--primary);
 }
+
 .check.err {
   color: var(--error);
 }
+
 .form .btn {
   width: 100%;
 }
+
 .form-status {
   margin: 10px 0 0;
   font-size: 12px;
 }
+
 .err-text {
   color: var(--error);
 }
+
 .success {
   display: none;
   padding: 30px;
@@ -424,10 +491,12 @@
   background: var(--white);
   text-align: center;
 }
+
 .success h3 {
   margin-bottom: 8px;
   font-size: 26px;
 }
+
 .success p {
   color: var(--muted);
   font-size: 14px;
@@ -443,9 +512,11 @@
   padding: 20px;
   background: rgba(26, 26, 24, 0.6);
 }
+
 .modal[hidden] {
   display: none;
 }
+
 .modal-box {
   position: relative;
   width: min(500px, 100%);
@@ -455,6 +526,7 @@
   border-radius: var(--r-lg);
   background: var(--surface);
 }
+
 .modal-close {
   position: absolute;
   top: 14px;
@@ -468,11 +540,13 @@
   font-size: 24px;
   line-height: 1;
 }
+
 .modal-lead {
   margin: 8px 0 14px;
   color: var(--muted);
   font-size: 14px;
 }
+
 .modal-box .form {
   padding: 0;
   border: 0;
@@ -487,6 +561,7 @@
   background: var(--primary-deep);
   color: var(--white);
 }
+
 .foot-top {
   display: grid;
   grid-template-columns: 1.45fr 0.8fr 0.8fr 1.2fr;
@@ -494,18 +569,22 @@
   padding-bottom: 44px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .site-footer .logo {
   color: var(--white);
 }
+
 .site-footer .logo-type span {
   color: rgba(255, 255, 255, 0.64);
 }
+
 .foot-intro {
-  max-width: 31ch;
+  max-width: 32ch;
   margin-top: 17px;
   color: rgba(255, 255, 255, 0.74);
   font-size: 13px;
 }
+
 .site-footer h4 {
   margin: 6px 0 15px;
   color: var(--lime);
@@ -513,6 +592,7 @@
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
+
 .site-footer ul {
   display: flex;
   flex-direction: column;
@@ -521,15 +601,18 @@
   padding: 0;
   list-style: none;
 }
+
 .site-footer li,
 .site-footer li a {
   color: rgba(255, 255, 255, 0.82);
   font-size: 13px;
   text-decoration: none;
 }
+
 .site-footer li a:hover {
   color: var(--lime);
 }
+
 .foot-bot {
   display: flex;
   justify-content: space-between;
@@ -538,6 +621,7 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 11px;
 }
+
 .map-link {
   color: var(--lime) !important;
   font-weight: 700;
@@ -545,8 +629,8 @@
 
 .test-mail {
   position: fixed;
-  left: 16px;
   bottom: 16px;
+  left: 16px;
   z-index: 35;
   padding: 10px 14px;
   border: 1px dashed var(--primary);
@@ -556,10 +640,12 @@
   font-size: 11px;
   font-weight: 700;
 }
+
 .test-mail.ok {
   border-color: var(--lime-dark);
   color: var(--lime-dark);
 }
+
 .test-mail.bad {
   border-color: var(--error);
   color: var(--error);
