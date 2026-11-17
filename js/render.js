@@ -22,7 +22,7 @@ function serviceCard(service, compact = false) {
       <h3>${service.title}</h3>
       <p>${service.lead}</p>
       ${items}
-      <button class="text-link" type="button" data-consult>Обсудить задачу <span>→</span></button>
+      <button class="text-link" type="button" data-consult data-service="${service.id}">Обсудить задачу <span>→</span></button>
     </article>
   `;
 }

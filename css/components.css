@@ -412,7 +412,8 @@
 }
 
 .field input,
-.field textarea {
+.field textarea,
+.field select {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid #d9c8de;
@@ -422,20 +423,54 @@
   outline: none;
 }
 
+.field select {
+  cursor: pointer;
+}
+
 .field textarea {
   min-height: 86px;
   resize: vertical;
 }
 
 .field input:focus,
-.field textarea:focus {
+.field textarea:focus,
+.field select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(166, 51, 189, 0.12);
 }
 
 .field.err input,
-.field.err textarea {
+.field.err textarea,
+.field.err select {
   border-color: var(--error);
+}
+
+.field-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.phone-field {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.2fr);
+  gap: 8px;
+}
+
+.phone-field--custom {
+  grid-template-columns: minmax(115px, 0.8fr) minmax(76px, 0.42fr) minmax(
+      0,
+      1fr
+    );
+}
+
+.phone-field .phone-custom-code[hidden] {
+  display: none;
+}
+
+.phone-field input,
+.phone-field select {
+  min-width: 0;
 }
 
 .help {

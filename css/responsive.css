@@ -224,6 +224,10 @@
   .modal-box {
     padding: 32px 21px;
   }
+  .phone-field,
+  .phone-field--custom {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 390px) {
