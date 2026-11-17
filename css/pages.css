@@ -557,14 +557,9 @@
   color: var(--primary-deep);
 }
 
-.post__visual--lime {
-  background: var(--lime);
-  color: var(--ink);
-} 
 
 .post__visual--purple-dark {
   background: var(--purple-dark);
-  color: var(--ink);
 }
 
 .post__visual--primary {
