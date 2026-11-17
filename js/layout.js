@@ -11,6 +11,30 @@ const LOGO_HTML = `
   <span class="logo-type"><b>KNOW</b><span>consult</span></span>
 `;
 
+// Услуги используются в форме и в карточках: один источник названий.
+const SERVICE_OPTIONS_HTML = [
+  '<option value="general">Общая консультация</option>',
+  ...SERVICES.map(
+    (service) => `<option value="${service.id}">${service.title}</option>`,
+  ),
+].join("");
+
+const PHONE_CODE_OPTIONS_HTML = `
+  <option value="+996">+996 Кыргызстан</option>
+  <option value="+7">+7 Казахстан / Россия</option>
+  <option value="+998">+998 Узбекистан</option>
+  <option value="+992">+992 Таджикистан</option>
+  <option value="+993">+993 Туркменистан</option>
+  <option value="+86">+86 Китай</option>
+  <option value="+82">+82 Южная Корея</option>
+  <option value="+90">+90 Турция</option>
+  <option value="+971">+971 ОАЭ</option>
+  <option value="+1">+1 США / Канада</option>
+  <option value="+44">+44 Великобритания</option>
+  <option value="+49">+49 Германия</option>
+  <option value="other">+XXX Другой регион</option>
+`;
+
 const HEADER_HTML = `
   <header class="site-header">
     <div class="topline">
@@ -84,18 +108,28 @@ const FORM_HTML = `
       <h3 class="form-title">Получите консультацию</h3>
       <p class="form-caption">Оставьте контакты — уточним задачу и подскажем следующий шаг.</p>
       <div class="field">
+        <label for="lead-service">Услуга</label>
+        <select id="lead-service" name="service">${SERVICE_OPTIONS_HTML}</select>
+        <span class="field-note" data-service-note>Выберите направление, с которым нужна помощь.</span>
+      </div>
+      <div class="field">
         <label for="lead-name">Ваше имя</label>
         <input id="lead-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name">
         <span class="help">Укажите имя</span>
       </div>
       <div class="field">
         <label for="lead-phone">Телефон</label>
-        <input id="lead-phone" name="phone" type="tel" placeholder="+996 700 000 000" autocomplete="tel">
-        <span class="help">Введите номер полностью</span>
+        <div class="phone-field">
+          <select id="lead-phone-code" class="phone-code" name="phoneCode" aria-label="Код страны">${PHONE_CODE_OPTIONS_HTML}</select>
+          <input class="phone-custom-code" name="customPhoneCode" type="tel" inputmode="numeric" maxlength="4" placeholder="+XXX" aria-label="Другой код страны" hidden>
+          <input id="lead-phone" name="phone" type="tel" inputmode="numeric" maxlength="9" placeholder="000 000 000" autocomplete="tel-national" aria-describedby="phone-help">
+        </div>
+        <span id="phone-help" class="field-note">Выберите код страны и введите оставшиеся 9 цифр номера.</span>
+        <span class="help">Введите ровно 9 цифр номера</span>
       </div>
       <div class="field">
-        <label for="lead-task">Ваш вопрос</label>
-        <textarea id="lead-task" name="task" rows="3" placeholder="Например: нужна консультация по поступлению"></textarea>
+        <label for="lead-task">Дополнительная информация</label>
+        <textarea id="lead-task" name="task" rows="3" placeholder="Укажите сроки, страну, документы или другие важные детали"></textarea>
       </div>
       <label class="check"><input type="checkbox" name="agree"> <span>Согласен на обработку персональных данных для получения консультации.</span></label>
       <button class="btn btn-primary" type="button" data-send>Отправить заявку <span class="arrow">→</span></button>
