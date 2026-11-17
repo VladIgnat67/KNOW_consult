@@ -1,5 +1,6 @@
 /* ==========================================================
-   KNOW consult travel — фирменная система из moodboard
+   KNOW CONSULT — переменные фирменной палитры
+   Меняйте цвета и базовые размеры только в этом файле.
    ========================================================== */
 
 :root {
@@ -15,10 +16,11 @@
   --line: #e7dcea;
   --white: #ffffff;
   --error: #d93636;
+  --shadow: 0 16px 36px rgba(94, 28, 110, 0.1);
 
   --r-sm: 8px;
   --r-md: 14px;
-  --r-lg: 22px;
+  --r-lg: 24px;
   --r-pill: 999px;
 
   --head: "Comfortaa", "Trebuchet MS", "Segoe UI", sans-serif;

@@ -70,14 +70,14 @@ function setupForm(container, subject) {
       status.classList.add("err-text");
     } finally {
       btn.disabled = false;
-      btn.innerHTML = 'Получить варианты <span class="arrow">→</span>';
+      btn.innerHTML = 'Отправить заявку <span class="arrow">→</span>';
     }
   });
 }
 
 document.querySelectorAll(".form-slot").forEach((slot) => {
   slot.innerHTML = FORM_HTML;
-  setupForm(slot, "Новая заявка с сайта KNOW consult travel");
+  setupForm(slot, "Новая заявка с сайта KNOW consult");
 });
 
 /* ---------- Окно «Консультация» ---------- */
@@ -87,12 +87,12 @@ modal.hidden = true;
 modal.innerHTML = `
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" type="button" aria-label="Закрыть">×</button>
-    <h2 id="modal-title">Подберём путешествие</h2>
-    <p class="modal-lead">Оставьте имя и телефон — команда KNOW consult уточнит детали и предложит варианты.</p>
+    <h2 id="modal-title">Консультация KNOW consult</h2>
+    <p class="modal-lead">Оставьте имя и телефон — уточним вашу задачу и предложим следующий шаг.</p>
     ${FORM_HTML}
   </div>`;
 document.body.appendChild(modal);
-setupForm(modal, "Запрос на подбор тура с сайта KNOW consult travel");
+setupForm(modal, "Запрос консультации с сайта KNOW consult");
 
 let lastFocus = null;
 function openModal() {

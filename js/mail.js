@@ -3,10 +3,7 @@
    Бесплатно, без регистрации и без своего сервера.
    ========================================================== */
 
-async function sendLead(
-  fields,
-  subject = "Новая заявка с сайта KNOW consult travel",
-) {
+async function sendLead(fields, subject = "Новая заявка с сайта KNOW consult") {
   if (!CONTACT_EMAIL || CONTACT_EMAIL.includes("ВАШ_EMAIL")) {
     throw new Error(
       "Не указан email для заявок. Откройте js/config.js и впишите свой адрес.",
@@ -68,7 +65,7 @@ if (typeof SHOW_TEST_BUTTON !== "undefined" && SHOW_TEST_BUTTON) {
           Телефон: "+996 000 000 000",
           Задача: "Проверка отправки писем с сайта",
         },
-        "ТЕСТ: заявка с сайта KNOW consult travel",
+        "ТЕСТ: заявка с сайта KNOW consult",
       );
       t.textContent = "Письмо отправлено ✓";
       t.classList.add("ok");
